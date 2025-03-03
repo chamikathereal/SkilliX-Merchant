@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "82204378667",
-    "project_id": "skillix-8f413",
-    "storage_bucket": "skillix-8f413.firebasestorage.app"
+    "project_number": "####",
+    "project_id": "skillix-####",
+    "storage_bucket": "skillix-####.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:82204378667:android:f99f21db70f65627f5cc6e",
+        "mobilesdk_app_id": "1:82204378667:android:####",
         "android_client_info": {
           "package_name": "com.skillix.merchant"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC9GOMXg5NP-fsrY5Q_A6rVvT52WMQmqtc"
+          "current_key": "AIzaSyC9GOMXg5NP-####"
         }
       ],
       "services": {
