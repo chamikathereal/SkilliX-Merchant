@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mentorProfileConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewMentorProfileFragment" >
+
+    <ScrollView
+        android:id="@+id/textComponentView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/mentorProfileCoverImageView"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/coverimage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/coverimage"
+                tools:srcCompat="@drawable/coverimage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/mentorProfileImageView"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="92dp"
+                android:src="@drawable/profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mentorProfileCoverImageView"
+                app:shapeAppearanceOverlay="@style/CircularShape" />
+
+            <TextView
+                android:id="@+id/mentorProfileNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/hello_user_text"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/mentorProfileImageView"
+                app:layout_constraintTop_toBottomOf="@+id/mentorProfileImageView" />
+
+            <TextView
+                android:id="@+id/mentorProfileBioTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="This is the place of mentor small bio belong"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/mentorProfileNameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/mentorProfileNameTextView" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/messageToMentorButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/buttons_shape"
+                android:backgroundTint="@color/color_blue"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/message_to_mentor"
+                android:textColor="@color/color_white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/hireMentorButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mentorProfileBioTextView" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/hireMentorButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/buttons_shape"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/hire_mentor"
+                android:textColor="@color/color_white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/messageToMentorButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/messageToMentorButton"
+                app:layout_constraintTop_toTopOf="@+id/messageToMentorButton" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/callButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/call"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/color_white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mailButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mailButton" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mailButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/email"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/color_white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/callButton"
+                app:layout_constraintTop_toBottomOf="@+id/mentorProfileCoverImageView" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/messageToMentorButton" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/mentor_about"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/mentorProfileAboutTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/mentor_about_description"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView17"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/mentor_career"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView17"
+                app:layout_constraintTop_toBottomOf="@+id/mentorProfileAboutTextView" />
+
+            <TextView
+                android:id="@+id/mentorProfileCareerTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/mentor_career_type"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/mentorProfileAboutTextView"
+                app:layout_constraintStart_toStartOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/mentor_education"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@+id/mentorProfileCareerTextView" />
+
+            <TextView
+                android:id="@+id/mentorProfileEducationTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/mentor_degree"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/mentorProfileCareerTextView"
+                app:layout_constraintStart_toStartOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+            <TextView
+                android:id="@+id/AddressTView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/mentor_address"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@+id/mentorProfileEducationTextView" />
+
+            <TextView
+                android:id="@+id/mentorProfileAddressView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/mentor_career_type"
+                android:textColor="@color/color_blue"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/mentorProfileEducationTextView"
+                app:layout_constraintStart_toStartOf="@+id/AddressTView"
+                app:layout_constraintTop_toBottomOf="@+id/AddressTView" />
+
+            <TextView
+                android:id="@+id/countryTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/mentor_country"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/AddressTView"
+                app:layout_constraintTop_toBottomOf="@+id/mentorProfileAddressView" />
+
+            <TextView
+                android:id="@+id/mentorProfileCountryTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/mentor_career_type"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/countryTextView"
+                app:layout_constraintTop_toBottomOf="@+id/countryTextView" />
+
+            <TextView
+                android:id="@+id/certifiedTechnologyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/mentor_certified_technology"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/countryTextView"
+                app:layout_constraintTop_toBottomOf="@+id/mentorProfileCountryTextView" />
+
+            <TextView
+                android:id="@+id/mentorProfileCertifiedTechnologyTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Java"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/mentorProfileAddressView"
+                app:layout_constraintStart_toStartOf="@+id/certifiedTechnologyTextView"
+                app:layout_constraintTop_toBottomOf="@+id/certifiedTechnologyTextView" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/mentor_feedbacks"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/certifiedTechnologyTextView"
+                app:layout_constraintTop_toBottomOf="@+id/mentorProfileCertifiedTechnologyTextView" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addFeedBackToMentorButton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/addfeedback"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/color_white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView25"
+                app:layout_constraintEnd_toEndOf="@+id/mentorProfileCertifiedTechnologyTextView"
+                app:layout_constraintTop_toTopOf="@+id/textView25" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/feedbackRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/viewPortfolioButton"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/internet"
+                android:src="@drawable/internet"
+                app:layout_constraintBottom_toBottomOf="@+id/mailButton"
+                app:layout_constraintEnd_toStartOf="@+id/mailButton"
+                app:layout_constraintTop_toTopOf="@+id/mailButton" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

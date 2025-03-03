@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MentorServicesDialogFragment">
+
+    <View
+        android:id="@+id/view13"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_bottom_corner_blue_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:src="@drawable/main_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/view13"
+        app:layout_constraintEnd_toEndOf="@+id/view13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view13" />
+
+    <Spinner
+        android:id="@+id/servicePackageSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/plain_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView31"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+    <EditText
+        android:id="@+id/serviceDescriptionEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"  android:minLines="3"  android:maxLines="5"  android:layout_marginTop="16dp"
+        android:background="@drawable/plain_text"
+        android:ems="10"
+        android:hint="@string/mentor_services_text2"
+        android:inputType="textMultiLine|textImeMultiLine"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="15dp"  android:paddingBottom="15dp" android:gravity="top"  app:layout_constraintEnd_toEndOf="@+id/servicePackageSpinner"
+        app:layout_constraintStart_toStartOf="@+id/servicePackageSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/servicePackageSpinner" />
+
+
+    <EditText
+        android:id="@+id/servicePriceEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/plain_text"
+        android:ems="10"
+        android:hint="@string/mentor_services_text3"
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/serviceDescriptionEditText"
+        app:layout_constraintStart_toStartOf="@+id/serviceDescriptionEditText"
+        app:layout_constraintTop_toBottomOf="@+id/serviceDescriptionEditText" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/mentor_services_text5"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view13" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

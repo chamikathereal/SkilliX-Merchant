@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mentorHomeFragment"
+        android:icon="@drawable/home"
+        android:title="DashBoard" />
+
+    <item
+        android:id="@+id/mentorAccountFragment"
+        android:icon="@drawable/user"
+        android:title="@string/menu_user" />
+
+    <item
+        android:id="@+id/mentorServicesFragment"
+        android:icon="@drawable/monetization_on"
+        android:title="@string/mentor_services_text4" />
+
+    <item
+        android:id="@+id/mentorViewFeedbackFragment"
+        android:icon="@drawable/feedback"
+        android:title="@string/mentor_feedback_view" />
+
+    <item
+        android:id="@+id/messageFragment"
+        android:icon="@drawable/message"
+        android:title="@string/menu_message" />
+
+    <item
+        android:id="@+id/menteeSettingFragment"
+        android:icon="@drawable/setting"
+        android:title="@string/menu_setting"
+        />
+
+    <item
+        android:id="@+id/signOut"
+        android:icon="@drawable/sign_out"
+        android:title="@string/sign_out"
+        />
+
+    <item
+        android:id="@+id/termsAndCondition"
+        android:icon="@drawable/guarantee"
+        android:title="@string/terms_and_condition"
+        />
+
+</menu>

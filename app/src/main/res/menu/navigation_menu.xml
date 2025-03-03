@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menteeHomeFragment"
+        android:icon="@drawable/home"
+        android:title="@string/menu_home" />
+
+    <item
+
+        android:id="@+id/menteeAccountFragment"
+        android:icon="@drawable/user"
+        android:title="@string/menu_user" />
+    <item
+        android:id="@+id/messageFragment"
+        android:icon="@drawable/message"
+        android:title="@string/menu_message" />
+
+    <item
+        android:id="@+id/viewHiredMentor"
+        android:icon="@drawable/hour_glass"
+        android:title="@string/view_hired_mentor"
+        />
+
+    <item
+        android:id="@+id/menteeSettingFragment"
+        android:icon="@drawable/setting"
+        android:title="@string/menu_setting"
+        />
+
+    <item
+        android:id="@+id/addNote"
+        android:icon="@drawable/notebook"
+        android:title="@string/add_note"
+        />
+
+    <item
+        android:id="@+id/signOut"
+        android:icon="@drawable/sign_out"
+        android:title="@string/sign_out"
+        />
+
+    <item
+        android:id="@+id/termsAndCondition"
+        android:icon="@drawable/guarantee"
+        android:title="@string/terms_and_condition"
+        />
+
+
+</menu>

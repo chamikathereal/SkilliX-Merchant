@@ -1,0 +1,5 @@
+<!-- res/drawable/line.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="1dp" /> <!-- Height of the line -->
+    <solid android:color="@color/color_gray" /> <!-- Color of the line -->
+</shape>

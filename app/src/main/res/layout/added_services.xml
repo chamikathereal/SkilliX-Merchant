@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/plain_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/mentor_subscription_month"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/view7" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/mentor_subscription_description"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintStart_toStartOf="@+id/nameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/mentor_subscription_currency"
+        android:textColor="@color/color_dark_green"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/descriptionTextView"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/mentor_subscription_price"
+        android:textColor="@color/color_dark_green"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView27"
+        app:layout_constraintStart_toEndOf="@+id/textView27"
+        app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/mentor_subscription_fee_zero"
+        android:textColor="@color/color_dark_green"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/priceTextView"
+        app:layout_constraintStart_toEndOf="@+id/priceTextView"
+        app:layout_constraintTop_toTopOf="@+id/priceTextView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/mentorPreviewSendMessageButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/buttons_shape"
+        android:backgroundTint="@color/color_red"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="@string/mentor_services_text6"
+        android:textColor="@color/color_white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/hiredMenteeProfileButton"
+        app:layout_constraintEnd_toStartOf="@+id/hiredMenteeProfileButton"
+        app:layout_constraintStart_toStartOf="@+id/textView27"
+        app:layout_constraintTop_toTopOf="@+id/hiredMenteeProfileButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/hiredMenteeProfileButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/buttons_shape"
+        android:backgroundTint="@color/color_accent"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="@string/mentor_services_text7"
+        android:textColor="@color/color_white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view7"
+        app:layout_constraintEnd_toEndOf="@+id/descriptionTextView"
+        app:layout_constraintStart_toEndOf="@+id/mentorPreviewSendMessageButton"
+        app:layout_constraintTop_toBottomOf="@+id/priceTextView"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

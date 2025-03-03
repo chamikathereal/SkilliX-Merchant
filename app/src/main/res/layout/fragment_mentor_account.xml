@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myAccountFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenteeAccountFragment">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/mentorCoverImage"
+                android:layout_width="0dp"
+                android:layout_height="215dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/addcoverimage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/uploadMentorCoverImageButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/camera"
+                android:shadowColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/mentorCoverImage"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/mentorProfileImage"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_marginTop="170dp"
+                android:src="@drawable/profile"
+                app:layout_constraintEnd_toEndOf="@+id/mentorCoverImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/mentorCoverImage"
+                app:shapeAppearanceOverlay="@style/CircularShape" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/uploadMentorProfileImageButton"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/buttons_shape"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/mentor_profile"
+                android:textColor="@color/color_white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/mentorProfileImage"
+                app:layout_constraintStart_toStartOf="@+id/mentorProfileImage"
+                app:layout_constraintTop_toBottomOf="@+id/mentorProfileImage" />
+
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/hello_text1"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/uploadMentorProfileImageButton"
+                app:layout_constraintStart_toStartOf="@+id/uploadMentorProfileImageButton"
+                app:layout_constraintTop_toBottomOf="@+id/uploadMentorProfileImageButton" />
+
+            <TextView
+                android:id="@+id/userFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/hello_user_text"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView11"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <!--Mentor Details EditText-->
+
+            <EditText
+                android:id="@+id/userFirstNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/signup_fourth_text"
+                android:inputType="text"
+                android:padding="15dp"
+                android:textColorHint="@color/color_gray"
+                app:layout_constraintEnd_toStartOf="@+id/userLastNameEditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userFullName" />
+
+            <EditText
+                android:id="@+id/userLastNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/signup_fifth_text"
+                android:inputType="text|textNoSuggestions"
+                android:padding="15dp"
+                android:textColorHint="@color/color_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/userFirstNameEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/userFirstNameEditText"
+                app:layout_constraintTop_toTopOf="@+id/userFirstNameEditText" />
+
+            <EditText
+                android:id="@+id/userEmailEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/signup_sixth_text"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"
+                android:textColorHint="@color/color_gray"
+                app:layout_constraintEnd_toEndOf="@+id/userLastNameEditText"
+                app:layout_constraintStart_toStartOf="@+id/userFirstNameEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userFirstNameEditText" />
+
+            <Spinner
+                android:id="@+id/userCountrySpinner"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/plain_text"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/userMobileEditText"
+                app:layout_constraintEnd_toEndOf="@+id/userFirstNameEditText"
+                app:layout_constraintStart_toStartOf="@+id/userEmailEditText"
+                app:layout_constraintTop_toTopOf="@+id/userMobileEditText" />
+
+            <EditText
+                android:id="@+id/userMobileEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/signup_eighth_text"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/userEmailEditText"
+                app:layout_constraintStart_toStartOf="@+id/userLastNameEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userEmailEditText" />
+
+            <TextView
+                android:id="@+id/userGenderTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/signup_eleven_text"
+                android:inputType="date"
+                android:padding="15dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/userCountrySpinner"
+                app:layout_constraintStart_toStartOf="@+id/userCountrySpinner"
+                app:layout_constraintTop_toBottomOf="@+id/userCountrySpinner" />
+
+            <Spinner
+                android:id="@+id/userCareerSpinner"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/plain_text"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/userGenderTextView"
+                app:layout_constraintEnd_toEndOf="@+id/userMobileEditText"
+                app:layout_constraintHorizontal_bias="0.233"
+                app:layout_constraintStart_toStartOf="@+id/userMobileEditText"
+                app:layout_constraintTop_toTopOf="@+id/userGenderTextView" />
+
+            <EditText
+                android:id="@+id/userBioEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/mentor_edit_profile_bio"
+                android:inputType="text|textMultiLine"
+                android:padding="15dp"
+                android:textColorHint="@color/color_gray"
+                app:layout_constraintEnd_toEndOf="@+id/userCareerSpinner"
+                app:layout_constraintStart_toStartOf="@+id/userGenderTextView"
+                app:layout_constraintTop_toBottomOf="@+id/userGenderTextView" />
+
+            <EditText
+                android:id="@+id/userAddressEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/plain_text"
+                android:editable="false"
+                android:ems="10"
+                android:hint="Address"
+                android:inputType="text|textMultiLine"
+                android:padding="15dp"
+                android:textColorHint="@color/color_gray"
+                app:layout_constraintEnd_toStartOf="@+id/addLocationButton"
+                app:layout_constraintStart_toStartOf="@+id/userBioEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userBioEditText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addLocationButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttons_shape"
+                android:backgroundTint="@color/color_blue"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="10dp"
+                android:text="@string/mentor_edit_profile_add_location"
+                android:textColor="@color/color_white"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/userAddressEditText"
+                app:layout_constraintEnd_toEndOf="@+id/userBioEditText"
+                app:layout_constraintTop_toTopOf="@+id/userAddressEditText" />
+
+            <EditText
+                android:id="@+id/userAboutEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/mentor_edit_profile_about"
+                android:inputType="text|textMultiLine"
+                android:padding="15dp"
+                android:textColorHint="@color/color_gray"
+                app:layout_constraintEnd_toEndOf="@+id/userBioEditText"
+                app:layout_constraintStart_toStartOf="@+id/userBioEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userAddressEditText" />
+
+            <EditText
+                android:id="@+id/userEducationEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/mentor_edit_profile_education"
+                android:inputType="text|textMultiLine"
+                android:padding="15dp"
+                android:textColorHint="@color/color_gray"
+                app:layout_constraintEnd_toEndOf="@+id/userAboutEditText"
+                app:layout_constraintStart_toStartOf="@+id/userAboutEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userAboutEditText" />
+
+            <EditText
+                android:id="@+id/portfolioEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/mentor_edit_profile_portfolio"
+                android:inputType="text|textMultiLine"
+                android:padding="15dp"
+                android:textColorHint="@color/color_gray"
+                app:layout_constraintEnd_toEndOf="@+id/userEducationEditText"
+                app:layout_constraintStart_toStartOf="@+id/userEducationEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userEducationEditText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/updateMentorAccountButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/buttons_shape"
+                android:backgroundTint="@color/color_accent"
+                android:fontFamily="@font/montserrat_bold"
+                android:padding="10dp"
+                android:text="@string/mentor_profile_save"
+                android:textColor="@color/color_white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/userCertifiedCategorySpinner"
+                app:layout_constraintStart_toStartOf="@+id/userCertifiedCategorySpinner"
+                app:layout_constraintTop_toBottomOf="@+id/userCertifiedCategorySpinner" />
+
+            <Spinner
+                android:id="@+id/userCertifiedCategorySpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/plain_text"
+                app:layout_constraintEnd_toEndOf="@+id/userEducationEditText"
+                app:layout_constraintStart_toStartOf="@+id/userEducationEditText"
+                app:layout_constraintTop_toBottomOf="@+id/portfolioEditText" />
+
+            <!--Mentor Details EditText-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myAccountFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MenteeAccountFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/menteeProfileIcon"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="@+id/userNameInAccountFrgament"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView11"
+        app:layout_constraintVertical_bias="0.372"
+        app:shapeAppearanceOverlay="@style/CircularShape" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/uploadMenteeProfileButton"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/buttons_shape"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/mentor_profile"
+        android:textColor="@color/color_white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/menteeProfileIcon"
+        app:layout_constraintStart_toStartOf="@+id/menteeProfileIcon"
+        app:layout_constraintTop_toBottomOf="@+id/menteeProfileIcon" />
+
+    <ScrollView
+        android:id="@+id/textComponentView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uploadMenteeProfileButton">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/userEmailEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/signup_sixth_text"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"
+                android:textColorHint="@color/color_gray"
+                app:layout_constraintEnd_toEndOf="@+id/userLastNameEditText"
+                app:layout_constraintStart_toStartOf="@+id/userFirstNameEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userFirstNameEditText" />
+
+            <EditText
+                android:id="@+id/userFirstNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/signup_fourth_text"
+                android:inputType="text"
+                android:padding="15dp"
+                android:textColorHint="@color/color_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/userLastNameEditText"
+                app:layout_constraintEnd_toStartOf="@+id/userLastNameEditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/userLastNameEditText" />
+
+            <EditText
+                android:id="@+id/userLastNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/signup_fifth_text"
+                android:inputType="text"
+                android:padding="15dp"
+                android:textColorHint="@color/color_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/userFirstNameEditText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/userCountrySpinner"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/plain_text"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/userMobileEditText"
+                app:layout_constraintEnd_toEndOf="@+id/userFirstNameEditText"
+                app:layout_constraintStart_toStartOf="@+id/userEmailEditText"
+                app:layout_constraintTop_toTopOf="@+id/userMobileEditText" />
+
+            <Spinner
+                android:id="@+id/userCareerSpinner"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/plain_text"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/userMobileEditText"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/userMobileEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userMobileEditText" />
+
+            <EditText
+                android:id="@+id/userMobileEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/signup_eighth_text"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/userEmailEditText"
+                app:layout_constraintStart_toStartOf="@+id/userLastNameEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userEmailEditText" />
+
+
+            <TextView
+                android:id="@+id/uerGenderTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/plain_text"
+                android:ems="10"
+                android:hint="@string/signup_ninth_text"
+                android:inputType="date"
+                android:padding="15dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/userCareerSpinner"
+                app:layout_constraintEnd_toEndOf="@+id/userCountrySpinner"
+                app:layout_constraintStart_toStartOf="@+id/userCountrySpinner"
+                app:layout_constraintTop_toTopOf="@+id/userCareerSpinner" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/updateMenteeAccountButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/buttons_shape"
+        android:fontFamily="@font/montserrat_bold"
+        android:padding="10dp"
+        android:text="@string/mentor_profile_save"
+        android:textColor="@color/color_white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textComponentView" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/hello_text1"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/menteeProfileIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userNameInAccountFrgament"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/hello_user_text"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menteeHomeFragmentConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MenteeHomeFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/loadMentorCardRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loadCareerSpinner" />
+
+    <EditText
+        android:id="@+id/searchMenteeTextText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/plain_text"
+        android:ems="10"
+        android:hint="Search Mentor."
+        android:inputType="text"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <Spinner
+        android:id="@+id/loadCareerSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/plain_text"
+        app:layout_constraintEnd_toStartOf="@+id/loadCertifiedSpinner"
+        app:layout_constraintStart_toStartOf="@+id/searchMenteeTextText"
+        app:layout_constraintTop_toBottomOf="@+id/searchMenteeTextText" />
+
+    <Spinner
+        android:id="@+id/loadCertifiedSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/plain_text"
+        app:layout_constraintBottom_toBottomOf="@+id/loadCareerSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/searchMenteeTextText"
+        app:layout_constraintStart_toEndOf="@+id/loadCareerSpinner"
+        app:layout_constraintTop_toTopOf="@+id/loadCareerSpinner" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/mentee_home"
+        android:textColor="@color/color_accent"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

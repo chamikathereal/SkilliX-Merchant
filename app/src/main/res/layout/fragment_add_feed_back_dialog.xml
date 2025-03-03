@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    tools:context=".AddFeedBackDialogFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/feedbackUserProfileImage"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view12"
+        app:shapeAppearanceOverlay="@style/CircularShape"
+        app:srcCompat="@drawable/profile" />
+
+
+    <TextView
+        android:id="@+id/feedbackUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Nishan Madhushka"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/feedbackUserProfileImage"
+        app:layout_constraintTop_toTopOf="@+id/feedbackUserProfileImage" />
+
+    <TextView
+        android:id="@+id/feedbackUserCareer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/mentor_career_type"
+        app:layout_constraintBottom_toBottomOf="@+id/feedbackUserProfileImage"
+        app:layout_constraintStart_toStartOf="@+id/feedbackUserName"
+        app:layout_constraintTop_toBottomOf="@+id/feedbackUserName" />
+
+
+    <EditText
+        android:id="@+id/enterFeedbackContext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/plain_text"
+        android:ems="10"
+        android:hint="@string/mentor_services_text2"
+        android:inputType="text|textMultiLine"
+        android:lines="8"
+        android:minHeight="100dp"
+        android:padding="15dp"
+        android:gravity="start|top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/feedbackUserProfileImage"
+        app:layout_constraintTop_toBottomOf="@+id/feedbackUserProfileImage" />
+
+
+    <View
+        android:id="@+id/view12"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_bottom_corner_blue_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:src="@drawable/main_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/view12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view12"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
