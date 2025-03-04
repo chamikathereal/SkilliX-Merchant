@@ -65,7 +65,7 @@ Welcome to **SkilliX Merchant**, a dynamic platform that bridges the gap between
 ## 📞 Contact
 
 For support or inquiries, reach out via:\
-📧 Email: [your-email@example.com](mailto:dmforceeg@gmail.com)\
+📧 Email: [dmforceeg@gmail.com](mailto:dmforceeg@gmail.com)\
 🔗 GitHub: [Chamikathereal](https://github.com/chamikathereal)
 
 ---
